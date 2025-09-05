@@ -3,7 +3,7 @@ using CsvHelper;
 
 namespace SimpleDB;
 
-class CSVDatabase<T> : IDatabaseRepository<T> //Subclasses
+sealed class CSVDatabase<T> : IDatabaseRepository<T> //Sealed modifier prevents subclasses
 {
     public IEnumerable<T> Read(int limit) //For at gøre den generic (Fremgået også på billedet
     {
